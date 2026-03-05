@@ -9,9 +9,9 @@ function createPromise(state, delay) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (state === 'fulfilled') {
-        resolve(`Fulfilled promise in ${delay}ms`);
+        resolve(delay);
       } else {
-        reject(`Rejected promise in ${delay}ms`);
+        reject(delay);
       }
     }, delay);
   });
@@ -27,22 +27,22 @@ function handleSubmit(event) {
   const state = formData.get('state');
 
   createPromise(state, delay)
-    .then(message => {
+    .then(delay => {
       iziToast.success({
         position: 'topRight',
         icon: false,
         close: false,
         progressBar: false,
-        message: `✅ ${message}`,
+        message: `✅ Fulfilled promise in ${delay}ms`,
       });
     })
-    .catch(message => {
+    .catch(delay => {
       iziToast.error({
         position: 'topRight',
         icon: false,
         close: false,
         progressBar: false,
-        message: `❌ ${message}`,
+        message: `❌ Rejected promise in ${delay}ms`,
       });
     });
 

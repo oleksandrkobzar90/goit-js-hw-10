@@ -28,8 +28,9 @@ const options = {
   dateFormat: 'Y-m-d H:i',
   onClose(selectedDates) {
     userSelectedDate = selectedDates[0];
+    const now = new Date();
 
-    if (userSelectedDate.getTime() > options.defaultDate.getTime()) {
+    if (userSelectedDate.getTime() > now) {
       startBtn.disabled = false;
     } else {
       startBtn.disabled = true;
