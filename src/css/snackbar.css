@@ -1,0 +1,87 @@
+input,
+fieldset {
+  box-sizing: border-box;
+}
+
+.form {
+  padding-top: 36px;
+  width: 360px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.form label:first-child {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  color: #2e2f42;
+}
+
+input[name='delay'] {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 16px;
+  color: #2e2f42;
+}
+
+input[name='delay']:hover {
+  border-color: #000;
+}
+
+input[name='delay']:focus {
+  border-color: #4e75ff;
+  outline: none;
+}
+
+fieldset {
+  display: flex;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #808080;
+  padding: 24px 48px 8px 48px;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+fieldset:hover,
+fieldset:focus {
+  border: 1px solid #000;
+}
+
+fieldset label:first-of-type {
+  margin-right: 48px;
+}
+
+fieldset label {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #2e2f42;
+}
+
+input[type='radio'] {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  accent-color: #4e75ff;
+}
+
+button {
+  border-radius: 8px;
+  width: 100%;
+  padding: 8px 99px;
+  background-color: #4e75ff;
+  border: none;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+button:hover {
+  background-color: #6c8cff;
+}
+
+button:active {
+  background-color: #2e4aa0;
+}
