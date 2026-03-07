@@ -24,6 +24,12 @@
   outline: none;
 }
 
+#datetime-picker:disabled {
+  border: 1px solid #808080;
+  color: #808080;
+  outline: none;
+}
+
 [data-start] {
   border-radius: 8px;
   padding: 8px 16px;
